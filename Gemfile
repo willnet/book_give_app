@@ -28,7 +28,7 @@ gem 'font-awesome-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.3.6'
   gem 'rspec-rails'
   gem 'capybara', '>= 2.15'
   gem 'factory_bot_rails'
