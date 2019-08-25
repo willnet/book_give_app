@@ -47,9 +47,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-#本番環境ではPostgreSQLを使用する
-gem 'pg', group: :production
-
+group :production do
+  gem 'pg', '0.20.0'
+end
 
 group :test do
   gem 'selenium-webdriver'
