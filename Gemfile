@@ -5,7 +5,6 @@ ruby '2.6.3'
 
 
 gem 'rails', '~> 6.0.0'
-gem 'sqlite3', '~> 1.4'
 gem 'bcrypt', '~> 3.1.7'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
@@ -29,6 +28,7 @@ gem 'font-awesome-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
+  gem 'sqlite3', '~> 1.4'
   gem 'rspec-rails'
   gem 'capybara', '>= 2.15'
   gem 'factory_bot_rails'
