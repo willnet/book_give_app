@@ -1,0 +1,36 @@
+<header>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg ">
+      <%= link_to root_path do %>
+        <%= image_tag "blue_logo.png" %>
+      <% end %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#切り替え表示されるコンテンツ名" aria-controls="切り替え表示されるコンテンツ名" aria-expanded="false" aria-label="ナビゲーション切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="切り替え表示されるコンテンツ名">
+        <ul class="navbar-nav text-right mr-4">
+          <li class="nav-item active">
+            <%= link_to "Top", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Log in", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "Sign up", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to " 本を探す", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "使い方", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "お問い合わせ", "#", class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</header>
