@@ -27,6 +27,7 @@
   size: 200px;
 }
 .nav-link{
+  font-size: 2.5rem;
   color: #2BF023;
 }
 
@@ -54,12 +55,12 @@ ul{
 .insta{
   position: absolute;
   margin-top: 5px;
-  right: 15%;
+  right: 25%;
 }
 .twitter{
   position: absolute;
   margin-top: 5px;
-  right: 10%;
+  right: 15%;
 }
 .facebook{
   position: absolute;
@@ -68,23 +69,75 @@ ul{
 }
 
 .contact{
+  font-size: 25px;
   position: absolute;
-  bottom: 1rem;
-  right: 25%;
+  bottom: 2rem;
+  right: 35%;
 }
 .privacy{
+  font-size: 25px;
   position: absolute;
-  bottom: 1rem;
+  bottom: 2rem;
   right: 5%;
 }
 
+//出品ボタン
+.fix{
+  position: fixed;
+  //top: 1500px;
+  right: 50px;
+  bottom: 200px;
+  left: 650px;
+}
+
+
 //Topページ
 .top-image-container{
-  text-align: center;
+  position: relative;
+  width: 100%;
+  padding: 0;
 }
+.top-image-container span{
+  font-weight: normal;
+  font-size: 5rem;
+  position: absolute;
+  left: 5%;
+  right: 0;
+  top: 50%;
+  bottom : 50%;
+  margin:  auto;
+}
+
 .description{
   color: #16360E;
   font-size: 1.5rem;
   padding-top: 10%;
   height: 400px;
+}
+.give_example{
+  height: 600px;
+}
+.signup{
+  height: 600px;
+}
+
+
+//各ページの見出しのスタイルを決めておく（heading）
+.heading{
+  //中央にするのはtext-centerでやってくれ
+  color: #ADA5A5;
+  font-size: 5em;
+}
+
+
+
+//Contact
+.heading{
+  padding-bottom: 60px;
+}
+.contact-description{
+  padding-bottom: 100px;
+}
+.contact_form{
+  height: 1200px;
 }

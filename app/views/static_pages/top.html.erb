@@ -1,8 +1,23 @@
 <div class="top-image-container">
-  <%= image_tag "top-background-image.png", id: "top-image", width: "980px" %>
+  <%= image_tag "top-background-image.png", id: "top-image", width: "980px",class: "img-responsive" %>
+    <span>本はもっと循環していい</span>
 </div>
 
 <div class="description text-center">
   <p>本をシェアするサービスです。</p>
   <p>あなたの家に眠っている本を誰かにgiveしてみませんか?</p>
 </div>
+
+
+
+<div class="give_example">
+  <h2 class="text-danger">実際にgiveされている本をタイル表示して検索窓を置く部分が入ります（仮で600px取ってある）</h2>
+</div>
+
+<div class="signup">
+  <h2 class="text-danger">新規登録、ログインを進めるボタンが入ります（仮で600px取ってある）</h2>
+</div>
+
+
+<!--出品ボタン（どこに書いても一緒）-->
+<%= render "layouts/exhibit_fix_button" %>
