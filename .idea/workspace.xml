@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="c65befe9-6247-4176-8bfc-81c9649832c5" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/app/assets/images/exhibit_logo.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/assets/images/hamburger_icon.png" afterDir="false" />
@@ -12,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/app/views/static_pages/contact.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/contact.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/static_pages/top.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/top.html.erb" afterDir="false" />
     </list>
+
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -65,8 +67,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact.html.erb">
               <provider selected="true" editor-type-id="text-editor">
+
                 <state relative-caret-position="180">
                   <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+
                 </state>
               </provider>
             </entry>
@@ -92,8 +96,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
               <provider selected="true" editor-type-id="text-editor">
+
                 <state relative-caret-position="486">
                   <caret line="142" column="1" lean-forward="true" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
+
                   <folding>
                     <element signature="e#852#1096#2" expanded="true" />
                   </folding>
@@ -149,8 +155,11 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_exhibit_fix_button.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/top.html.erb" />
+x
         <option value="$PROJECT_DIR$/app/views/static_pages/contact.html.erb" />
+
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
       </list>
     </option>
   </component>
@@ -354,20 +363,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566710370196</updated>
-      <workItem from="1566710374192" duration="25506000" />
+      <workItem from="1566710374192" duration="26337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+
     <option name="totallyTimeSpent" value="34004000" />
+
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="805" extended-state="6" />
-    <editor active="true" />
     <layout>
+
       <window_info content_ui="combo" id="Project" order="0" weight="0.21888413" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -390,6 +402,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -400,6 +413,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-658" />
@@ -555,27 +569,36 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/top.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/images/footer_icon.jpeg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="486">
           <caret line="142" column="1" lean-forward="true" selection-start-line="142" selection-start-column="1" selection-end-line="142" selection-end-column="1" />
+
           <folding>
-            <element signature="e#852#1096#2" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/contact.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+
         </state>
       </provider>
     </entry>
