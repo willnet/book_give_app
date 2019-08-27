@@ -21,8 +21,70 @@
   border-color: #2BF023;
 }
 .navbar-toggler-icon{
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(43, 240, 35)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath
+  stroke='rgba(43, 240, 35)' stroke-width='3' stroke-linecap='round'
+   stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  size: 200px;
 }
 .nav-link{
   color: #2BF023;
+}
+
+
+//footer部分
+.footer-set{
+  position: relative;
+  border-top: solid #2BF023;
+  border-width: 1px;
+  height: 200px;
+}
+.copy-right{
+  position: absolute;
+  margin-top: 5px;
+  left: 1rem;
+}
+.footer-icon{
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+ul{
+  list-style: none;
+}
+.insta{
+  position: absolute;
+  margin-top: 5px;
+  right: 15%;
+}
+.twitter{
+  position: absolute;
+  margin-top: 5px;
+  right: 10%;
+}
+.facebook{
+  position: absolute;
+  margin-top: 5px;
+  right: 5%;
+}
+
+.contact{
+  position: absolute;
+  bottom: 1rem;
+  right: 25%;
+}
+.privacy{
+  position: absolute;
+  bottom: 1rem;
+  right: 5%;
+}
+
+//Topページ
+.top-image-container{
+  text-align: center;
+}
+.description{
+  color: #16360E;
+  font-size: 1.5rem;
+  padding-top: 10%;
+  height: 400px;
 }
