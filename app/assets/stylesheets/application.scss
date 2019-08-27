@@ -31,6 +31,12 @@
   color: #2BF023;
 }
 
+//ヘッダー部分のレスポンシブ対応
+@media (min-width: 768px) {
+  .navbar-nav .nav-link{
+    color: #2BF023;
+  }
+}
 
 //footer部分
 .footer-set{
@@ -41,7 +47,7 @@
 }
 .copy-right{
   position: absolute;
-  margin-top: 5px;
+  margin-top: 2%;
   left: 1rem;
 }
 .footer-icon{
@@ -69,13 +75,13 @@ ul{
 }
 
 .contact{
-  font-size: 25px;
+  font-size: 1.5rem;
   position: absolute;
   bottom: 2rem;
   right: 35%;
 }
 .privacy{
-  font-size: 25px;
+  font-size: 1.5rem;
   position: absolute;
   bottom: 2rem;
   right: 5%;
@@ -84,10 +90,9 @@ ul{
 //出品ボタン
 .fix{
   position: fixed;
-  //top: 1500px;
-  right: 50px;
-  bottom: 200px;
-  left: 650px;
+  right: 10%;
+  bottom: 10%;
+  left: 70%;
 }
 
 
@@ -131,7 +136,7 @@ ul{
 
 
 
-//Contact
+//Contactページ
 .heading{
   padding-bottom: 60px;
 }
@@ -140,4 +145,21 @@ ul{
 }
 .contact_form{
   height: 1200px;
+}
+
+
+//privacy_policyページ
+.privacy-heading{
+  text-align: center;
+  color: red;
+  font-size: 3rem;
+  padding: 50px 0 30px 0;
+}
+.privacy-sentence{
+  padding: 0 10% 0 10%;
+  p{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
 }
