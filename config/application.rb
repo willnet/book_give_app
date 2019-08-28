@@ -16,6 +16,9 @@ module BookGiveApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    #deviseを日本語化するための記述
+    config.i18n.default_locale = :ja
+
     #rspecファイルを自動生成するための記述
     config.generators do |g|
       g.test_framework :rspec,
