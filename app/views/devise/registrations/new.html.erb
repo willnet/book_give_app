@@ -1,5 +1,5 @@
 <div class="heading text-center">
-  <span>Sign up</span>
+  <span><%= link_to "Sign up", new_user_registration_path, style: "color: #ADA5A5;"%></span>
 </div>
 
 <form class="signup-form">
@@ -29,8 +29,10 @@
     </div>
 
 
-
-     <%= f.submit "新規登録", class: "btn btn-success" %>
+    <div class="text-right">
+      <%= f.submit "Sign up", class: "submit-button" %>
+      <p class="mt-4"><%= link_to "既にアカウントをお持ちですか？", new_user_session_path%></p>
+    </div>
   <% end %>
 
 </form>
@@ -39,4 +41,4 @@
 
 
 
-<%= render "devise/shared/links" %>
+
