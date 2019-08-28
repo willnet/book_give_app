@@ -1,0 +1,42 @@
+<div class="heading text-center">
+  <span>Sign up</span>
+</div>
+
+<form class="signup-form">
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+      <%= f.text_field :name, autofocus: true, :placeholder => "user name", class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "email", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :パスワード%>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %>文字以上)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :パスワードをもう一度入力してください %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+
+
+     <%= f.submit "新規登録", class: "btn btn-success" %>
+  <% end %>
+
+</form>
+
+
+
+
+
+<%= render "devise/shared/links" %>

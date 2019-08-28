@@ -12,6 +12,7 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 
+gem 'devise'
 gem 'jquery-rails'
 
 #必要なgemを最初に入れておきます。

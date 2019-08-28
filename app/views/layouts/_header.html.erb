@@ -10,15 +10,33 @@
       </button>
       <div class="collapse navbar-collapse text-right" id="切り替え表示されるコンテンツ名">
         <ul class="mr-auto"></ul>
+
         <ul class="navbar-nav">
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to "Top", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "マイページ",  "#my_page_path", class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to " 本を探す", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "使い方", how_to_use_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          <% else %>
           <li class="nav-item active">
             <%= link_to "Top", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Log in", "#", class: "nav-link" %>
+            <%= link_to "Log in",  new_user_session_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Sign up", "#", class: "nav-link" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
           </li>
           <li class="nav-item active">
             <%= link_to " 本を探す", "#", class: "nav-link" %>
@@ -26,7 +44,9 @@
           <li class="nav-item active">
             <%= link_to "使い方", how_to_use_path, class: "nav-link" %>
           </li>
+          <% end %>
         </ul>
+
       </div>
     </nav>
   </div>
