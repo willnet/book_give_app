@@ -1,5 +1,5 @@
 <div class="heading text-center">
-  <span><%= link_to "Sign up", new_user_registration_path, style: "color: #ADA5A5;"%></span>
+  <span>Sign up</span>
 </div>
 
 <form class="signup-form">
@@ -8,11 +8,13 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="form-group">
-      <%= f.text_field :name, autofocus: true, :placeholder => "user name", class: "form-control"%>
+      <%= f.text_field :name, autofocus: true, :placeholder => "user name",
+                       class: "form-control", id: "user_name"%>
     </div>
 
     <div class="form-group">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "email", class: "form-control" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",
+                        :placeholder => "email", class: "form-control", id: "email" %>
     </div>
 
     <div class="form-group">
@@ -20,18 +22,18 @@
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %>文字以上)</em>
       <% end %>
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control",id: "password" %>
     </div>
 
     <div class="form-group">
       <%= f.label :パスワードをもう一度入力してください %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", id: "password_confirmation" %>
     </div>
 
 
     <div class="text-right">
       <%= f.submit "Sign up", class: "submit-button" %>
-      <p class="mt-4"><%= link_to "既にアカウントをお持ちですか？", new_user_session_path%></p>
+      <p class="mt-4"><%= link_to "既にアカウントをお持ちですか？", new_user_path%></p>
     </div>
   <% end %>
 
