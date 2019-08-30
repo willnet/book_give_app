@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
-    get 'my_page' => 'users/registrations#my_page'
     get "/users/sign_out" => "devise/sessions#destroy"
   end
 
+  resources :users
 
   #static_pagesコントローラの部分
   root "static_pages#top"

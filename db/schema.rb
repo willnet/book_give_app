@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_08_28_004944) do
     t.datetime "locked_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+
+    #ここからが自分でマイグレーションファイルを使って追加したやつ
     t.string "name"
     t.string "image"
     t.string "address"
@@ -41,6 +43,9 @@ ActiveRecord::Schema.define(version: 2019_08_28_004944) do
     t.string "took_books"
     t.string "now_give_books"
     t.string "already_give_books"
+    # ここまで
+
+
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
