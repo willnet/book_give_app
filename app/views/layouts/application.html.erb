@@ -11,15 +11,15 @@
     <%= favicon_link_tag('favicon.ico') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-<!--    これを書くとスマホの表示が一気に崩れてしまう...-->
-<!--    <meta name="viewport" content="width=device-width" initial-scale="1">-->
+
   </head>
 
   <body>
   <%= render "layouts/header" %>
-<!--  devise導入時のものです-->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <div class="flash_message text-center pb-5">
+    <%= render "layouts/flash" %>
+  </div>
 
     <%= yield %>
   <%= render "layouts/footer" %>

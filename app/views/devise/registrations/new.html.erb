@@ -2,7 +2,7 @@
   <span>Sign up</span>
 </div>
 
-<form class="signup-form">
+<div class="signup-form">
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -15,6 +15,11 @@
     <div class="form-group">
       <%= f.email_field :email, autofocus: true, autocomplete: "email",
                         :placeholder => "email", class: "form-control", id: "email" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.file_field :image, autofocus: true, :placeholder => "image",
+                       class: "form-control", id: "image"%>
     </div>
 
     <div class="form-group">
@@ -33,11 +38,11 @@
 
     <div class="text-right">
       <%= f.submit "Sign up", class: "submit-button" %>
-      <p class="mt-4"><%= link_to "既にアカウントをお持ちですか？", new_user_path%></p>
+      <p class="mt-4"><%= link_to "既にアカウントをお持ちですか？", new_user_session_path%></p>
     </div>
   <% end %>
 
-</form>
+</div>
 
 
 

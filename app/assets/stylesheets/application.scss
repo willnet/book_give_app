@@ -96,6 +96,18 @@ ul{
 }
 
 
+//flashメッセージ
+.flash_message{
+  .notice{
+    color: #2BF023;
+    background-color: white;
+  }
+  .alert{
+    color: red;
+    background-color: white;
+  }
+}
+
 //Topページ
 .top-image-container{
   position: relative;
@@ -234,4 +246,75 @@ ul{
     text-align: justify;
     border-bottom: solid 2px #2BF023;
   }
+}
+
+
+//ユーザー情報変更ページ
+.user_edit_form{
+  height: 1000px;
+  padding: 0 10% 0 10%;
+}
+.password_help_text{
+  color: #ADA5A5;
+}
+
+//マイページ
+.my-page-info{
+  height: 550px;
+  position: relative;
+}
+.profile-image {
+  position: absolute;
+  padding: 5% 0 10% 15%;
+  img {
+    width: 200px; /* ※縦横を同値に */
+    height: 200px; /* ※縦横を同値に */
+    border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top; /* 横長画像の左上を基準に表示 */
+    display: inline-block; /* 複数の画像を横に並べたい場合 */
+    border: 2px solid #2BF023; /* 枠線を付加 */
+  }
+}
+.user_name{
+  position: absolute;
+  padding: 15% 20% 20% 50%;
+  color: #191313;
+  font-size: 3rem;
+}
+.give_and_take_count{
+  font-size: 2.5rem;
+  color: #ADA5A5;
+  .give-count{
+    position: absolute;
+    padding: 35% 0 10% 15%;
+  }
+  .take-count{
+    position: absolute;
+    padding: 35% 20% 10% 50%;
+  }
+}
+
+.my-page-menu{
+  height: 1000px;
+  border-top: solid 2px #2BF023;
+  margin: 0 10% 0 10%;
+  .box {
+    height: 70px;
+    margin: 30px 0 30px 0;
+    padding: 1em;
+    width: 100%;
+    border: 1px solid #ccc; /* 枠線 */
+    background-color: #fff; /* 背景色 */
+    box-shadow: 1px 1px 2px #ccc;
+  }
+  span{
+    display: block;
+    font-size: 1.5rem;
+  }
+  p{
+    font-size: 2rem;
+  }
+}
+.my-page-link{
+  display: block;
 }
