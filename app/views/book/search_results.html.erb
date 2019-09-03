@@ -1,0 +1,59 @@
+<div class="heading text-center">
+  <span>Search results</span>
+</div>
+
+<div class="search-title text-center">
+  <%# if #検索結果があれば表示する %>
+  <span><%= "「検索窓に入れた名前」" %>の検索結果<%= "〇〇件" %></span>
+
+  <%# else 検索結果が０ならば表示しない%>
+  <!--<p><%#= 検索された名前 %>は現在Giveされていません。</p>-->
+<%# end %>
+
+  <div class="grid">
+<!--    ここは繰り返し処理で書くところ。paginationを追加してね。８件までは表示させても良いと思う-->
+    <div class="book-cover">
+      <%= image_tag "zikken.png" %>
+            <p class="text-center"><%= "出品したユーザーリンク" %></p>
+    </div>
+
+    <div class="book-cover">
+      <%= image_tag "zikken.png" %>
+            <p class="text-center"><%= "出品したユーザーリンク" %></p>
+    </div>
+
+    <div class="book-cover">
+      <%= image_tag "zikken.png" %>
+            <p class="text-center"><%= "出品したユーザーリンク" %></p>
+    </div>
+
+    <div class="book-cover">
+      <%= image_tag "zikken.png" %>
+            <p class="text-center"><%= "出品したユーザーリンク" %></p>
+    </div>
+
+    <div class="book-cover">
+      <%= image_tag "zikken.png" %>
+            <p class="text-center"><%= "出品したユーザーリンク" %></p>
+    </div>
+
+    <div class="book-cover">
+      <%= image_tag "zikken.png" %>
+            <p class="text-center"><%= "出品したユーザーリンク" %></p>
+    </div>
+  </div>
+
+<!--  これは仮、本当はBootstrapで書く-->
+  <div class="text-center pb-5">
+    <%= image_tag "pagination.png" %>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<%= render "layouts/exhibit_fix_button" %>

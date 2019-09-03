@@ -4,6 +4,6 @@ FactoryBot.define do
     name{"マイケル"}
     email{"example1@gmail.com"}
     password{"foobar"}
-    image{ Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/test.jpg'))}
+    # image{ Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/test.jpg'))}
   end
 end

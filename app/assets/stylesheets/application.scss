@@ -30,6 +30,17 @@
   font-size: 2.5rem;
   color: #2BF023;
 }
+.header-user-image {
+  padding-left: 50%;
+  img {
+    width: 110px; /* ※縦横を同値に */
+    height: 110px; /* ※縦横を同値に */
+    border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top; /* 横長画像の左上を基準に表示 */
+    display: inline-block; /* 複数の画像を横に並べたい場合 */
+    border: 1px solid #2BF023; /* 枠線を付加 */
+  }
+}
 
 //ヘッダー部分のレスポンシブ対応
 @media (min-width: 768px) {
@@ -317,4 +328,81 @@ ul{
 }
 .my-page-link{
   display: block;
+}
+
+
+//booksコントローラの部分
+
+//search_resultsページ
+.search-title{
+  height: auto;
+  font-size: 2rem;
+  padding: 20px 10% 0 10%;
+  span{
+    border-bottom: solid #2BF023 1px;
+  }
+}
+
+.grid{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 6%;
+  margin-bottom: 50px;
+  img {
+    width: 250px; /* ※縦横を同値に */
+    height: 250px; /* ※縦横を同値に */
+    border-radius: 0; /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top; /* 横長画像の左上を基準に表示 */
+    display: inline-block; /* 複数の画像を横に並べたい場合 */
+    border: 2px solid #2BF023; /* 枠線を付加 */
+  }
+  p{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+}
+
+//send_offerページ
+.request-title{
+  height: 1000px;
+  padding: 20px 10% 0 10%;
+  position: relative;
+  span{
+    font-size: 1.5rem;
+    line-height: 1.7;
+    text-align: justify;
+  }
+}
+.request-title-border{
+  border-bottom: #2BF023 1px solid;
+  margin-top: 1rem;
+}
+.request-title-book-cover{
+  padding-top: 5rem;
+  position: absolute;
+  img {
+    width: 400px; /* ※縦横を同値に */
+    height: 400px; /* ※縦横を同値に */
+    border-radius: 0; /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top; /* 横長画像の左上を基準に表示 */
+    display: inline-block; /* 複数の画像を横に並べたい場合 */
+    border: 2px solid black; /* 枠線を付加 */
+  }
+}
+.request-title-giver-icon{
+  position: absolute;
+  padding: 10rem 10% 0 50% ;
+  img {
+    width: 300px; /* ※縦横を同値に */
+    height: 300px; /* ※縦横を同値に */
+    border-radius: 50%; /* 角丸半径を50%にする(=円形にする) */
+    background-position: left top; /* 横長画像の左上を基準に表示 */
+    display: inline-block; /* 複数の画像を横に並べたい場合 */
+    border: 2px solid #2BF023; /* 枠線を付加 */
+  }
+}
+.send-offer-submit-button{
+
 }
