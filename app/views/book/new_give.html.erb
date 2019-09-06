@@ -1,3 +1,45 @@
 <div class="heading text-center">
   <span>Exhibit</span>
 </div>
+
+<div class="book_exhibit">
+
+  <div class="exhibit-description text-center">
+    <span>Giveする準備は驚くほど簡単です。</span>
+    <br>
+    <span>ISBNから書籍を検索し、Giveする本を選択してください。</span>
+  </div>
+
+  <div class="container book_exhibit_container">
+    <div class="result"></div>
+    <div class="panel-title">本情報取得フォーム
+      <div class="form-group" id="get-book">
+        <input class="form-control" id="isbn" placeholder="ISBNを入力してください" type="text">
+      </div>
+
+      <div class="form-submit text-right">
+        <button class="btn btn-outline-dark" id="submit" type="submit">本を検索する</button>
+      </div>
+    </div>
+
+
+
+    <div class="result-image"></div>
+
+
+
+    <%= form_for @book, :url => {:controller => :book, :action => :create}  do |f| %>
+      <%= f.text_field :name,label: "タイトル",placeholder:"本のタイトル",id:"book-name" %>
+
+
+      <%= f.text_field :image,type:"hidden",hide_label: true, id:"image_url" %>
+
+      <%= f.submit "Giveする",class:"btn btn-outline-dark" %>
+    <% end %>
+
+
+  </div>
+
+</div>
+
+

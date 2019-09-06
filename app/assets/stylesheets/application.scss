@@ -468,3 +468,20 @@ ul{
   }
 }
 
+//new_give（giveする本の登録ページ）
+
+.book_exhibit{
+  height: 1000px;
+  padding: 0 10% 0 10%;
+}
+.exhibit-description{
+  border-bottom: #2BF023 solid 1px;
+  span{
+    font-size: 1.5rem;
+    line-height: 2.0;
+    text-align: justify;
+  }
+}
+.book_exhibit_container{
+  padding-top: 100px;
+}

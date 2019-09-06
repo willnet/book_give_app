@@ -16,6 +16,9 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-//= require jquery3
+//= require jquery
 //= require popper
 //= require bootstrap-sprockets
+//= require_tree .
+
+console.log("hanahana")
