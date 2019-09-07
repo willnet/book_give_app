@@ -42,6 +42,13 @@ RSpec.feature "Users", :devise do
       expect(current_path).to eq  new_user_registration_path
     end
 
+    scenario "ログインしていればtopぺージにlog_inとsign_upのレコメンドが表示されないこと" do
+      visit root_path
+      log_in @user
+      visit root_path
+      expect(page).to_not have_content "すでにアカウントをお持ちですか？"
+      expect(page).to_not have_content "まずは新規登録から"
+    end
 
     scenario "ログイン画面からログインが正常にできること" do
       log_in @user
