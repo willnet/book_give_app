@@ -29,10 +29,11 @@
 
 
     <%= form_for @book, :url => {:controller => :book, :action => :create}  do |f| %>
-      <%= f.text_field :name,label: "タイトル",placeholder:"本のタイトル",id:"book-name" %>
+      <%= f.text_field :name,label: "タイトル",placeholder:"検索すると本のタイトルが自動で入ります",
+                       id:"book-name", readonly: true %>
 
 
-      <%= f.text_field :image,type:"hidden",hide_label: true, id:"image_url" %>
+      <%= f.text_field :image,type:"hidden",hide_label: true, id:"image_url", readonly: true %>
 
       <%= f.submit "Giveする",class:"btn btn-outline-dark" %>
     <% end %>
@@ -41,5 +42,7 @@
   </div>
 
 </div>
+
+
 
 

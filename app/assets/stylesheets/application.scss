@@ -17,6 +17,13 @@
 
 
 //ヘッダー部分
+header .app-logo img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-position: left top;
+  display: inline-block;
+}
 .navbar-toggler{
   border-color: #2BF023;
 }
@@ -65,6 +72,13 @@
   position: absolute;
   bottom: 1rem;
   left: 1rem;
+  img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-position: left top;
+      display: inline-block;
+  }
 }
 ul{
   list-style: none;
@@ -99,13 +113,31 @@ ul{
 }
 
 //出品ボタン
-.fix{
-  position: fixed;
-  right: 10%;
-  bottom: 10%;
-  left: 70%;
-}
 
+.exhibit-fix-button{
+  position: fixed;
+  right: 5%;
+  bottom: 10%;
+  left: 75%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-position: left top;
+  background: #1CD8D2;
+  background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
+  background: linear-gradient(to right, #93EDC7, #1CD8D2);
+  border: 2px solid white;
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+  }
+}
 
 //flashメッセージ
 .flash_message{
@@ -120,20 +152,24 @@ ul{
 }
 
 //Topページ
-.top-image-container{
+.top-background-color{
+  height: 600px;
+  background: #1CD8D2;
+  background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
+  background: linear-gradient(to right, #93EDC7, #1CD8D2);
   position: relative;
-  width: 100%;
-  padding: 0;
 }
-.top-image-container span{
+.top-background-color span{
   font-weight: normal;
-  font-size: 5rem;
+  font-size: 2.5rem;
   position: absolute;
-  left: 5%;
-  right: 0;
   top: 50%;
-  bottom : 50%;
-  margin:  auto;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
 }
 
 .top-description{
@@ -145,8 +181,32 @@ ul{
 .give_example{
   height: 600px;
 }
-.signup{
+.sign_up-recommend{
+  padding: 0 10% 0 10%;
   height: 600px;
+  p{
+    color: #ADA5A5;
+    font-size: 2rem;
+  }
+}
+.log_in-recommend{
+  padding-top: 40px;
+}
+
+.top-submit-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #2BF023;
+  color: #ffffff;
+  border-bottom: solid 4px #2E2F30;
+  border-radius: 3px;
+}
+.top-submit-button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
 }
 
 

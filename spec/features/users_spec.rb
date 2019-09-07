@@ -11,7 +11,7 @@ RSpec.feature "Users", :devise do
     scenario "サインアップページから新規登録がしっかり出来ること" do
       #sign_up_support.rbでモジュールを作っている
       sign_up
-
+      save_and_open_page
       expect(page).to have_content "ボブ"
       expect(page).to have_http_status(:success)
     end
@@ -33,6 +33,15 @@ RSpec.feature "Users", :devise do
 
 
   feature "ログイン周り" do
+
+    scenario "ログインしていないならtopページにlog_inとsign_upのレコメンドが表示されること" do
+      expect(page).to have_content "すでにアカウントをお持ちですか？"
+      expect(page).to have_content "まずは新規登録から"
+      click_link "Sign up"
+      expect(current_path).to eq  new_user_session_path
+    end
+
+    scenario
 
     scenario "ログイン画面からログインが正常にできること" do
       log_in @user

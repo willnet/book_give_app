@@ -22,9 +22,11 @@
   <body>
   <%= render "layouts/header" %>
 
+  <% if flash.present?  %>
   <div class="flash_message text-center pb-5">
     <%= render "layouts/flash" %>
   </div>
+  <% end %>
 
     <%= yield %>
   <%= render "layouts/footer" %>
