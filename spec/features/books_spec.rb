@@ -28,8 +28,8 @@ RSpec.feature "Books", type: :feature do
       visit book_new_give_path
       fill_in "isbn", with: "4794221789"
       click_button "本を検索する"
-      save_and_open_page
-      expect(page).to have_content "マインドセット「やればできる! 」の研究"
+      # save_and_open_page
+      expect(page).to have_content "マインドセット"
     end
   end
 

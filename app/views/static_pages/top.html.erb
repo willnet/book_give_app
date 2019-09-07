@@ -18,14 +18,15 @@
 
   <div class="sign_up-recommend text-center">
     <p>Giveするには、まずは新規登録から</p>
-    <div class="top-submit-button"><p><%= link_to "Sign up",
-                                                  new_user_registration_path, :style => "color: white;" %></p></div>
+    <p><%= button_to "Sign up",
+                     new_user_registration_path, :style => "color: white;",
+                     method: :get, class: "top-submit-button" %></p>
 
 
     <div class="log_in-recommend text-center">
       <p>すでにアカウントをお持ちですか？</p>
-      <div class="top-submit-button"><p><%= link_to "Log in", new_user_session_path,
-                                                :style => "color: white"%></p></div>
+      <p><%= button_to "Log in", new_user_session_path, :style => "color: white",
+      method: :get, class: "top-submit-button"%></p>
     </div>
   </div>
 

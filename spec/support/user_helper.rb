@@ -2,7 +2,7 @@ module UserHelper
 
   def sign_up
     visit root_path
-    click_on "Sign up"
+    click_on "Sign up", match: :first
     fill_in "user_name", with: "ボブ"
     fill_in "email", with: "example2@gmail.com"
     fill_in "password", with: "foobar"
@@ -13,7 +13,7 @@ module UserHelper
 
   def log_in(user)
     visit root_path
-    click_on "Log in"
+    click_on "Log in", match: :first
     #factorybotで作ったuserの情報を入力する
     fill_in "email",with: user.email
     fill_in "password",with: user.password
