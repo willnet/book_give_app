@@ -93,7 +93,7 @@ RSpec.feature "Users", :devise do
       user_edit
       expect(@user.reload.name).to eq "変更後の名前です"
       expect(@user.reload.email).to eq "different_email@gmail.com"
-      # expect(@user.reload.password).to eq "new_password"
+      # expect(@user.reload.password).to eq "new-password"
     end
 
     scenario "変更された情報でログインできること" do
@@ -102,7 +102,7 @@ RSpec.feature "Users", :devise do
       click_on "ログアウト"
       click_on "Log in", match: :first
       fill_in "email", with: "different_email@gmail.com"
-      fill_in "password", with: "new_password"
+      fill_in "password", with: "new-password"
       click_button "Log in"
 
       expect(page).to have_content "ログインしました"
