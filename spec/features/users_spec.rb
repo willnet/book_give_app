@@ -87,33 +87,33 @@ RSpec.feature "Users", :devise do
     end
   end
 
-  # feature "アカウント編集周り" do
-  #   scenario "正常にユーザー情報が更新されること" do
-  #     log_in @user
-  #     user_edit
-  #     expect(@user.reload.name).to eq "変更後の名前です"
-  #     expect(@user.reload.email).to eq "different_email@gmail.com"
-  #     expect(@user.reload.password).to eq "new_password"
-  #   end
-  #
-  #   scenario "変更された情報でログインできること" do
-  #     log_in @user
-  #     user_edit
-  #     click_on "ログアウト"
-  #     click_on "Log in"
-  #     fill_in "email", with: "different_email@gmail.com"
-  #     fill_in "password", with: "new_password"
-  #     click_button "Log in"
-  #
-  #     expect(page).to have_content "ログインしました"
-  #   end
-  #
-  #   scenario "passwordとpassword_confirmationが一致していなければエラーになること" do
-  #     log_in @user
-  #     mistake_password_confirmation
-  #     expect(page).to have_content "あい"
-  #   end
-  # end
+  feature "アカウント編集周り" do
+    scenario "正常にユーザー情報が更新されること" do
+      log_in @user
+      user_edit
+      expect(@user.reload.name).to eq "変更後の名前です"
+      expect(@user.reload.email).to eq "different_email@gmail.com"
+      # expect(@user.reload.password).to eq "new_password"
+    end
+
+    scenario "変更された情報でログインできること" do
+      log_in @user
+      user_edit
+      click_on "ログアウト"
+      click_on "Log in", match: :first
+      fill_in "email", with: "different_email@gmail.com"
+      fill_in "password", with: "new_password"
+      click_button "Log in"
+
+      expect(page).to have_content "ログインしました"
+    end
+
+    scenario "passwordとpassword_confirmationが一致していなければエラーになること" do
+      log_in @user
+      mistake_password_confirmation
+      expect(page).to have_content "Password confirmationとPasswordの入力が一致しません"
+    end
+  end
 
 
   feature "マイページ周り" do
