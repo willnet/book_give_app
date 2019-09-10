@@ -355,13 +355,14 @@ ul{
 .give_and_take_count{
   font-size: 2.5rem;
   color: #ADA5A5;
+  position: relative;
   .give-count{
     position: absolute;
-    padding: 35% 0 10% 15%;
+    padding: 35% 0 0 15%;
   }
   .take-count{
     position: absolute;
-    padding: 35% 20% 10% 50%;
+    padding: 35% 20% 0 50%;
   }
 }
 
