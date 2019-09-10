@@ -6,7 +6,7 @@
 
   <div class="profile-image">
     <% if @user.image? %>
-      <%= image_tag @user.image.url %>
+      <%= image_tag @user.image.to_s %>
     <% else %>
       <%= image_tag "no-image.png" %>
     <% end %>

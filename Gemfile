@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'
 
 gem 'jbuilder', '~> 2.7'
-
+gem 'fog-aws'
 gem 'devise'
 gem 'jquery-rails'
 
