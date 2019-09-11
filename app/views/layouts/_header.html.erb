@@ -13,7 +13,7 @@
         <% if user_signed_in? %>
           <% if current_user.image? %>
             <%= link_to current_user do %>
-              <%= image_tag current_user.image.url %>
+              <%= image_tag current_user.image.to_s %>
             <% end %>
           <% else %>
             <%= link_to current_user do %>
