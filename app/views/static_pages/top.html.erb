@@ -1,5 +1,4 @@
-<div class="top-image-container text-center">
-  <%= image_tag "top-background-image.png", id: "top-image", width: "980px",class: "img-responsive" %>
+<div class="top-background-color">
     <span>本はもっと循環していい</span>
 </div>
 
@@ -14,10 +13,27 @@
   <h2 class="text-danger">実際にgiveされている本をタイル表示して検索窓を置く部分が入ります（仮で600px取ってある）</h2>
 </div>
 
-<div class="signup">
-  <h2 class="text-danger">新規登録、ログインを進めるボタンが入ります（仮で600px取ってある）</h2>
-</div>
+
+<% if !user_signed_in? %>
+
+  <div class="sign_up-recommend text-center">
+    <p>Giveするには、まずは新規登録から</p>
+    <p><%= button_to "Sign up",
+                     new_user_registration_path, :style => "color: white;",
+                     method: :get, class: "top-submit-button" %></p>
 
 
-<!--出品ボタン（どこに書いても一緒）-->
+    <div class="log_in-recommend text-center">
+      <p>すでにアカウントをお持ちですか？</p>
+      <p><%= button_to "Log in", new_user_session_path, :style => "color: white",
+      method: :get, class: "top-submit-button"%></p>
+    </div>
+  </div>
+
+<% end %>
+
+
+
+
+
 <%= render "layouts/exhibit_fix_button" %>

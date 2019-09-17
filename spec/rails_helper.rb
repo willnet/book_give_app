@@ -2,6 +2,8 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
+
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
@@ -68,12 +70,10 @@ RSpec.configure do |config|
   #capybara導入のための記述
   require 'capybara/rspec'
 
-  config.include LogInSupport
-  config.include SignUpSupport
-
-
-  # Devise のヘルパーメソッドをテスト内で使用する
-
-  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include UserHelper
 
 end
+
+
+
+

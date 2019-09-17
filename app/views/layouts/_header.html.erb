@@ -1,11 +1,30 @@
 <header>
 
-  <div class="container-fluid pt-3 pb-3">
-    <nav class="navbar navbar-expand-lg img-responsive">
-      <%= link_to root_path do %>
-        <%= image_tag "blue_logo.png",width: "150px" %>
-      <% end %>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#切り替え表示されるコンテンツ名" aria-controls="切り替え表示されるコンテンツ名" aria-expanded="false" aria-label="ナビゲーション切替">
+  <div class="container-fluid pt-3 ">
+    <nav class="navbar  img-responsive">
+
+      <div class="app-logo">
+        <%= link_to root_path do %>
+          <%= image_tag "book_give_logo.png" %>
+        <% end %>
+      </div>
+
+      <div class="header-user-image">
+        <% if user_signed_in? %>
+          <% if current_user.image? %>
+            <%= link_to current_user do %>
+              <%= image_tag current_user.image.to_s  %>
+            <% end %>
+          <% else %>
+            <%= link_to current_user do %>
+              <%= image_tag "no-image.png" %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#切り替え表示されるコンテンツ名"
+              aria-controls="切り替え表示されるコンテンツ名" aria-expanded="false" aria-label="ナビゲーション切替">
         <%= image_tag "hamburger_icon.png", width: "90px", height: "90px" %>
       </button>
       <div class="collapse navbar-collapse text-right" id="切り替え表示されるコンテンツ名">
@@ -26,7 +45,7 @@
               <%= link_to "使い方", how_to_use_path, class: "nav-link" %>
             </li>
             <li class="nav-item active">
-              <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: "nav-link" %>
+              <%= link_to "ログアウト",  destroy_user_session_path, method: :delete, class: "nav-link", id: "log_out" %>
             </li>
           <% else %>
           <li class="nav-item active">
@@ -50,5 +69,6 @@
       </div>
     </nav>
   </div>
+
 
 </header>

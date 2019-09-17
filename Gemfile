@@ -9,9 +9,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.7'
 
+gem 'jbuilder', '~> 2.7'
+gem 'fog-aws'
 gem 'devise'
 gem 'jquery-rails'
 
@@ -43,7 +43,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-
+  gem 'spring-commands-rspec'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

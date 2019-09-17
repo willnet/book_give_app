@@ -10,16 +10,23 @@
           crossorigin="anonymous">
     <%= favicon_link_tag('favicon.ico') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!-- Scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-<!--    これを書くとスマホの表示が一気に崩れてしまう...-->
-<!--    <meta name="viewport" content="width=device-width" initial-scale="1">-->
+
   </head>
 
   <body>
   <%= render "layouts/header" %>
-<!--  devise導入時のものです-->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <% if flash.present?  %>
+  <div class="flash_message text-center pb-5">
+    <%= render "layouts/flash" %>
+  </div>
+  <% end %>
 
     <%= yield %>
   <%= render "layouts/footer" %>

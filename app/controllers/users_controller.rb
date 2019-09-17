@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   #マイページを表示する
   def show
-    @user = current_user
+    @user = User.find_by(id: params[:id])
   end
 
   private

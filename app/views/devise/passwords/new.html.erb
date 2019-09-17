@@ -7,7 +7,7 @@
   <p>パスワード再発行の案内を添付したメールを送信します。</p>
 
 </div>
-<form class="password_reset_form">
+<div class="password_reset_form">
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
@@ -27,7 +27,7 @@
     それでも解決しない場合は<%= link_to "お問い合わせ", contact_path, style: "color: #2BF023;" %>よりご連絡ください。</span>
   </div>
 
-</form>
+</div>
 
 
 

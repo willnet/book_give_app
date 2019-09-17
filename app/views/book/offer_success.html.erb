@@ -1,0 +1,37 @@
+<div class="heading text-center">
+  <span>Success</span>
+</div>
+
+<div class="offer-success">
+  <p class="text-center">リクエストが完了しました！！</p>
+  <span>
+<%= link_to "マイページ", current_user, style: "color: #ADA5A5;" %>からメッセージのやり取りができます。
+    詳しい流れについては<%= link_to "使い方", how_to_use_path, style: "color: #ADA5A5;" %>をご覧ください。</span>
+
+  <div class="sns-icon">
+    <%= image_tag "green_instagram.png" %>
+    <%= image_tag "green_twitter.png" %>
+    <%= image_tag "green_facebook.png" %>
+  </div>
+
+  <div class="have_a_nice_day">
+    <p class="text-center">Have a nice day!!</p>
+  </div>
+
+  <div class="logo-ball">
+    <%= link_to how_to_use_path do %>
+      <%= image_tag "how_to_use_logo.png"%>
+    <% end %>
+
+    <%= link_to current_user do %>
+      <%= image_tag "my_page_logo.png" %>
+    <% end %>
+  </div>
+
+</div>
+
+
+<%= render "layouts/exhibit_fix_button" %>
+
+
+

@@ -20,4 +20,12 @@ Rails.application.routes.draw do
   get '/how_to_use', to: "static_pages#how_to_use"
   get '/privacy', to: "static_pages#privacy"
 
+  #bookコントローラの部分
+  get 'book/search_results'
+  get 'book/send_offer'
+  get 'book/offer_success'
+  get 'book/new_give'
+  get 'book/give_confirmation'
+  resources :book
+
 end
