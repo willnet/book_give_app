@@ -331,7 +331,7 @@ ul{
 
 //マイページ
 .my-page-info{
-  height: 550px;
+  height: 450px;
   position: relative;
 }
 .profile-image {
@@ -348,28 +348,29 @@ ul{
 }
 .user_name{
   position: absolute;
-  padding: 15% 20% 20% 50%;
+  padding: 12% 20% 20% 50%;
   color: #191313;
   font-size: 3rem;
 }
 .give_and_take_count{
+  height: 100px;
   font-size: 2.5rem;
   color: #ADA5A5;
   position: relative;
   .give-count{
     position: absolute;
-    padding: 35% 0 0 15%;
+    padding: 0 10% 0 20%;
   }
   .take-count{
     position: absolute;
-    padding: 35% 20% 0 50%;
+    padding: 0 20% 0 50%;
   }
 }
 
 .my-page-menu{
   height: 1000px;
   border-top: solid 2px #2BF023;
-  margin: 0 10% 0 10%;
+  margin: 5% 10% 0 10%;
   .box {
     height: 70px;
     margin: 30px 0 30px 0;

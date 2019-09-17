@@ -13,6 +13,7 @@ RSpec.feature "Users", :devise do
       sign_up
 
       expect(page).to have_content "ボブ"
+      expect(page).to have_css ".profile-image"
       expect(page).to have_http_status(:success)
     end
 

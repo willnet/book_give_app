@@ -6,7 +6,7 @@
 
   <div class="profile-image">
     <% if @user.image? %>
-      <%= image_tag @user.image.to_s %>
+      <%= image_tag current_user.image.to_s %>
     <% else %>
       <%= image_tag "no-image.png" %>
     <% end %>
@@ -15,19 +15,18 @@
     <p><%= @user.name %></p>
   </div>
 
-  <div class="give_and_take_count">
-    <div class="give-count">
-      <p>Giveした数</p>
-      <p class="text-center"><%= 12 %></p>
-    </div>
-    <div class="take-count">
-      <p>Giveされた数</p>
-      <p class="text-center"><%= 8 %></p>
-    </div>
-  </div>
-
 </div>
 
+<div class="give_and_take_count">
+  <div class="give-count">
+    <p>Giveした数</p>
+    <p class="text-center"><%= 12 %></p>
+  </div>
+  <div class="take-count">
+    <p>Giveされた数</p>
+    <p class="text-center"><%= 8 %></p>
+  </div>
+</div>
 
 <div class="my-page-menu">
   <div class="box"><span class="align-middle"><%= "オファー受付中のあなたの本" %></span></div>

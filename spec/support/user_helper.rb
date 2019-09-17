@@ -5,6 +5,7 @@ module UserHelper
     click_on "Sign up", match: :first
     fill_in "user_name", with: "ボブ"
     fill_in "email", with: "example2@gmail.com"
+    attach_file 'image', "#{Rails.root}/spec/fixtures/test.jpg"
     fill_in "password", with: "foobar"
     fill_in "password_confirmation", with: "foobar"
 
