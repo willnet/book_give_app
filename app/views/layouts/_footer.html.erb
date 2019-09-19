@@ -2,16 +2,19 @@
   <div class="copy-right">
     <small>Copyright (c) tatsupon All Rights Reserved.</small>
   </div>
+
   <div class="footer-icon">
-    <%= image_tag "book_give_logo.png", width: "70px", height: "70px" %>
+    <%= link_to root_path do %>
+      <%= image_tag "book_give_logo.png", width: "70px", height: "70px" %>
+    <% end %>
   </div>
+
   <div class="footer-sns-icon">
     <ul>
-      <li class="insta"><%= image_tag "instagram.black.png",width: "40px", height: "40px" %></li>
-      <li class="twitter"><%= image_tag "twitter.black.png",width: "40px", height: "40px" %></li>
-      <li class="facebook"><%= image_tag "facebook.black.png",width: "40px", height: "40px" %></li>
+     <a href="https://twitter.com/tatu_tech" target="_blank"><i class="fab fa-twitter fa-3x twitter"></i></a>
     </ul>
   </div>
+
   <div>
     <ul>
       <li class="contact"><%= link_to "お問い合わせ", contact_path, class: "text text-dark" %></li>
