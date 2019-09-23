@@ -18,7 +18,7 @@ require("channels")
 
 //= require jquery
 //= require popper
-//= require bootstrap-sprockets
+// = require bootstrap-sprockets
 //= require_tree .
 
-console.log("hanahana")
+console.log("hogehoge")
