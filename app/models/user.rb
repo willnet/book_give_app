@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
 
   # 自分で追加したカラムにバリデーションをかけておく
-  validates :name, presence: true, length: {maximum: 50}
+  validates :name, presence: true, length: {maximum: 6}
 
   # https://easyramble.com/user-account-update-without-password-on-devise.html
   def update_without_current_password(params, *options)

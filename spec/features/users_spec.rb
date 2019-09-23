@@ -92,7 +92,7 @@ RSpec.feature "Users", :devise do
     scenario "正常にユーザー情報が更新されること" do
       log_in @user
       user_edit
-      expect(@user.reload.name).to eq "変更後の名前です"
+      expect(@user.reload.name).to eq "変更後の名前"
       expect(@user.reload.email).to eq "different_email@gmail.com"
       # expect(@user.reload.password).to eq "new-password"
     end
@@ -118,7 +118,7 @@ RSpec.feature "Users", :devise do
 
 
   feature "マイページ周り" do
-    scenario "viewが正常に表示されていること" do
+    scenario "マイページのviewが正常に表示されていること" do
       log_in @user
       expect(page).to have_content "オファー受付中のあなたの本"
       expect(page).to have_content "アカウント情報の編集"
@@ -129,6 +129,14 @@ RSpec.feature "Users", :devise do
     end
   end
 
+  feature "使い方ページ周り" do
+    scenario "使い方ページのviewが正常に表示されていること" do
+      visit root_path
+      click_link "使い方"
+      expect(page).to have_content "Giveするなら"
+      expect(page).to have_content "Giveされるなら"
+    end
+  end
 
 end
 

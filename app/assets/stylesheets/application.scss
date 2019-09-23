@@ -59,7 +59,7 @@ header .app-logo img{
 //footer部分
 .footer-set{
   position: relative;
-  border-top: solid #2BF023;
+  border-top: solid black;
   border-width: 1px;
   height: 200px;
 }
@@ -84,7 +84,7 @@ ul{
   list-style: none;
 }
 
-.twitter{
+.footer-twitter{
   position: absolute;
   margin-top: 10px;
   right: 5%;
@@ -242,13 +242,51 @@ ul{
 
 
 //使い方ページ
+
+.give_or_take{
+  padding-top: 20px;
+  height: 80px;
+  padding-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  div{
+    font-size: 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+}
+.how_to_use_heading{
+  padding: 0 10% 30px 10%;
+  color: #2BF023;
+  font-size: 2rem;
+}
 .how_to_use_sentence{
-  height: 1500px;
+  height: 1000px;
   padding: 0 10% 0 10%;
-  p{
+  span{
     font-size: 1.5rem;
-    line-height: 1.7;
+    line-height: 2;
     text-align: justify;
+  }
+  ul {
+    border: solid 2px #2BF023;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+  }
+
+  ul li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none!important;
+  }
+
+  ul li:before {
+    font-family: FontAwesome;
+    content: "\f138";/*アイコンの種類*/
+    position: absolute;
+    left : 1em;/*左端からのアイコンまでの距離*/
+    color: #2BF023;/*アイコン色*/
   }
 }
 
@@ -317,7 +355,7 @@ ul{
   height: 1000px;
   padding: 0 10% 0 10%;
 }
-.password_help_text{
+.form_help_text{
   color: #ADA5A5;
 }
 
@@ -343,6 +381,7 @@ ul{
   padding: 12% 20% 20% 50%;
   color: #191313;
   font-size: 3rem;
+  white-space: nowrap;
 }
 .give_and_take_count{
   height: 100px;
@@ -498,17 +537,11 @@ ul{
   align-items: center;
   justify-content: center;
   height: 200px;
-  img{
-    margin: 15px;
-    padding: 15px;
-    width: 4rem;
-    height: 4rem;
-  }
-}
-.have_a_nice_day{
-  p{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .sns-icon-3{
     color: #2BF023;
-    font-size: 5rem;
+    margin: 3rem;
   }
 }
 .logo-ball{
