@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
     //画像のHTMLを生成する。
     function buildImage(book) {
-        var no_image = '<div class="book_image"><img "width="200" height="200" src="<%= image_path('no_image.jpg')%>"></div>';
+        // var no_image = '<div class="book_image"><img "width="200" height="200" src="<%= image_path('no_image.jpg')%>"></div>';
         var image = '<div class="book_image img-thumbnail"><img "width="250" height="250" + src="' + book[0].summary.cover + '"></div>';
         if (!book[0].summary.cover){
             var image = no_image; //画像がなかった場合の処理
@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
     }
     //画像URLを生成する。
     function imageUrl(book){
-        var no_image_url = '<%= image_path('/assets/no_image.png')%>';
+        // var no_image_url = '<%= image_path('/assets/no_image.png')%>';
         var image_url = book[0].summary.cover;
         //".jpg"に"_0"を加える。最大サイズの画像を取得できるようになる。
         var image_url = image_url.replace(".jpg", "_0.jpg");
