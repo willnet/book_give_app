@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get 'book/offer_success'
   get 'book/new_give'
   get 'book/give_confirmation'
+  get '/book/:id/message' => "book#message"
   resources :book
 
 end

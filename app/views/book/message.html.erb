@@ -1,0 +1,34 @@
+<div class="heading text-center">
+  <span>Message</span>
+</div>
+
+<div class="message">
+<!--  この画面を見ている（現在ログインしている）ユーザーがこの本の取引においてtakerならこれ、giverならこれ、と表示を変えることになります-->
+  <%# if current_user.id == @book.taker_id %>
+
+  <div class="message-description text-center">
+    <span>相手とメッセージを送受信できます。<br>
+配送先の確認など、必要に応じてご利用ください。<br>
+お手元に本が届きましたら「本が届いた！！」ボタンを押して、取引を完了してください。</span>
+  </div>
+
+  <div class="complete-button-container">
+    <div class="complete-button">
+      <p>本が届いた！！</p>
+    </div>
+  </div>
+
+<!--  このページを見ているのがgiverならボタンが無いパターンを表示させる-->
+  <%# elsif current_user.id == @book.giver_id %>
+<!--  <div class="message-description text-center">-->
+<!--    <span>相手とメッセージを送受信できます。<br>-->
+<!--配送先の確認など、必要に応じてご利用ください。</span>-->
+
+  <%# end %>
+
+  <div class="message-index">
+
+  </div>
+
+
+</div>
