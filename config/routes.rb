@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  get '/users/:id/registered' => 'users#registered'
 
   #static_pagesコントローラの部分
   root "static_pages#top"

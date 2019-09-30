@@ -7,6 +7,11 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  # 登録済みの本を照会する
+  def registered
+    @user = User.find_by(id: params[:id])
+  end
+
   private
 
   #ログインしているだけじゃなくて正しいユーザーかどうかを確認する
