@@ -35,7 +35,7 @@ RSpec.feature "Users", :devise do
 
   feature "ログイン周り" do
 
-    scenario "ログインしていないならtopページにlog_inとsign_upのレコメンドが表示されること" do
+    scenario "ログインしていないならtopページにlog_inとsign_upを促すものが表示されること" do
       visit root_path
       expect(page).to have_content "すでにアカウントをお持ちですか？"
       expect(page).to have_content "まずは新規登録から"
@@ -124,17 +124,74 @@ RSpec.feature "Users", :devise do
       expect(page).to have_content "アカウント情報の編集"
       expect(page).to have_content "Giveした履歴・Giveされた履歴"
       expect(page).to have_content "届いているGiveオファー"
-      expect(page).to have_content "欲しい本をオファーする"
       expect(page).to have_content "Giveする"
+    end
+
+    scenario "マイページに表示されているリンク先が正しいパスになっていること" do
+      log_in @user
+      click_link "オファー受付中のあなたの本"
+      expect(current_path).to eq  "/users/1/registered"
+      click_link "マイページ"
+      click_link "アカウント情報の編集"
+      expect(current_path).to eq "/users/edit"
+      click_link "マイページ"
+      click_link "Giveした履歴・Giveされた履歴"
+      expect(current_path).to eq "/users/1/history"
+      click_link "マイページ"
+      click_link "届いているGiveオファー"
+      expect(current_path).to eq "/users/1/offered"
+      click_link "マイページ"
+      click_link "Giveする"
+      expect(current_path).to eq "/book/new_give"
     end
   end
 
-  feature "使い方ページ周り" do
-    scenario "使い方ページのviewが正常に表示されていること" do
+  feature "viewが正常に表示されているか周り" do
+    scenario "使い方ページ" do
       visit root_path
       click_link "使い方"
       expect(page).to have_content "Giveするなら"
       expect(page).to have_content "Giveされるなら"
+    end
+
+    scenario "オファー受付中の本を表示するページ" do
+      log_in @user
+      click_link "オファー受付中のあなたの本"
+      expect(page).to have_content "Registered"
+      expect(page).to have_content "#{@user.name}さんは以下の本を登録済みです"
+      expect(page).to have_content "詳しい流れや方法は使い方をご確認ください。"
+    end
+
+    scenario "アカウント情報の編集ページ" do
+      log_in @user
+      click_link "アカウント情報の編集"
+      expect(page).to have_content "Edit"
+      expect(page).to have_content "６文字以下で入力してください"
+      expect(page).to have_content "(６文字以上) パスワードの変更が不要な場合は空欄のままUpdateボタンを押してください"
+    end
+
+    scenario "Giveした履歴のページ" do
+      log_in @user
+      click_link "Giveした履歴・Giveされた履歴"
+      expect(page).to have_content "History"
+      expect(page).to have_content "Giveした履歴"
+      expect(page).to have_content "Giveされた履歴"
+      expect(page).to have_content "出品する"
+    end
+
+    scenario "届いているGiveオファーページ" do
+      log_in @user
+      click_link "届いているGiveオファー"
+      expect(page).to have_content "Offered"
+      expect(page).to have_content "#{@user.name}さんに届いたGiveオファーです"
+      expect(page).to have_content "詳しい流れや方法は使い方をご確認ください。"
+    end
+
+    scenario "新しく本を登録する(new_give)ページ" do
+      log_in @user
+      click_link "Giveする"
+      expect(page).to have_content "Giveする準備は驚くほど簡単です。 ISBNから書籍を検索し、Giveする本を選択してください。"
+      expect(page).to have_content "詳しい流れや方法は使い方をご確認ください。"
     end
   end
 

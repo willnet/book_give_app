@@ -12,6 +12,16 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  #Giveした履歴とGIveされた履歴を表示するページ
+  def history
+    @user = User.find_by(id: params[:id])
+  end
+
+  # 届いているオファーを確認できるページ
+  def offered
+    @user = User.find_by(id: params[:id])
+  end
+
   private
 
   #ログインしているだけじゃなくて正しいユーザーかどうかを確認する

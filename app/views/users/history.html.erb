@@ -1,0 +1,28 @@
+<div class="heading text-center">
+  <span>History</span>
+</div>
+
+<div class="history">
+
+  <div class="history-select">
+    <div><a href="#gave-item">Giveした履歴</a></div>
+    <div><a href="#took_item">Giveされた履歴</a></div>
+  </div>
+
+  <div class="gave_item" id="gave-item"><p>Giveした履歴</p>
+<!--  繰り替え処理で書くことになると思います-->
+    <%# @user.already_give_books.each do |b| %>
+    <%#= b.name %>
+      <%# end %>
+  </div>
+
+  <div class="took_item" id="took_item"><p>Giveされた履歴</p>
+<!--  繰り返し処理で書くことになりますね-->
+    <%# @user.took_books.each do |b| %>
+    <%#= b.name %>
+    <%# end %>
+  </div>
+
+</div>
+
+<%= render "layouts/exhibit_fix_button" %>
