@@ -8,10 +8,15 @@ RSpec.feature "Users", :devise do
   end
 
   feature "サインアップ周り" do
+
+    scenario "サインアップするとメール認証を促すflashが表示されること" do
+      sign_up
+      expect(page).to_not have_content "本人確認用のメールを送信しました。メール内のリンクからアカウントを有効化させてください。"
+      expect(current_path).to eq "/"
+    end
     scenario "サインアップページから新規登録がしっかり出来ること" do
       #sign_up_support.rbでモジュールを作っている
       sign_up
-
       expect(page).to have_content "ボブ"
       expect(page).to have_css ".profile-image"
       expect(page).to have_http_status(:success)

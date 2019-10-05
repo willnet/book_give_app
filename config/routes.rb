@@ -32,4 +32,9 @@ Rails.application.routes.draw do
   get '/book/:id/message' => "book#message"
   resources :book
 
+  #開発環境でletter_opener_webを使うための記述
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
+
 end

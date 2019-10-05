@@ -322,7 +322,7 @@ ul{
 
 //LogInページ
 .log_in_form{
-  height: 800px;
+  min-height: 1000px;
   padding: 0 10% 0 10%;
 }
 .option{
@@ -332,7 +332,7 @@ ul{
 
 //パスワードリセットページ
 .password_reset_form{
-  height: 300px;
+  min-height: 800px;
   padding: 0 10% 0 10%;
 }
 .password_reset_description{
