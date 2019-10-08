@@ -27,18 +27,15 @@ header .app-logo img{
 .navbar-toggler{
   border-color: #2BF023;
 }
-.navbar-toggler-icon{
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath
-  stroke='rgba(43, 240, 35)' stroke-width='3' stroke-linecap='round'
-   stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  size: 200px;
+.header-hamburger{
+  color: #2BF023;
 }
 .nav-link{
   font-size: 2.5rem;
   color: #2BF023;
 }
 .header-user-image {
-  padding-left: 50%;
+  padding-left: 55%;
   img {
     width: 110px; /* ※縦横を同値に */
     height: 110px; /* ※縦横を同値に */
@@ -59,7 +56,7 @@ header .app-logo img{
 //footer部分
 .footer-set{
   position: relative;
-  border-top: solid #2BF023;
+  border-top: solid black;
   border-width: 1px;
   height: 200px;
 }
@@ -84,7 +81,8 @@ ul{
   list-style: none;
 }
 
-.twitter{
+//footer部分
+.footer-twitter{
   position: absolute;
   margin-top: 10px;
   right: 5%;
@@ -131,6 +129,11 @@ ul{
   }
 }
 
+//使い方ページへの案内パーシャル
+.how_guide{
+  padding-top: 2rem;
+  font-size: 1.5rem;
+}
 //flashメッセージ
 .flash_message{
   .notice{
@@ -225,8 +228,8 @@ ul{
 
 //privacy_policyページ
 .privacy-heading{
-  text-align: center;
-  color: red;
+  //text-align: center;
+  color: #2BF023;
   font-size: 3rem;
   padding: 50px 0 30px 0;
 }
@@ -242,13 +245,51 @@ ul{
 
 
 //使い方ページ
+
+.give_or_take{
+  padding-top: 20px;
+  height: 80px;
+  padding-bottom: 250px;
+  display: flex;
+  justify-content: center;
+  div{
+    font-size: 2rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+}
+.how_to_use_heading{
+  padding: 0 10% 30px 10%;
+  color: #2BF023;
+  font-size: 2rem;
+}
 .how_to_use_sentence{
-  height: 1500px;
+  height: 1000px;
   padding: 0 10% 0 10%;
-  p{
+  span{
     font-size: 1.5rem;
-    line-height: 1.7;
+    line-height: 2;
     text-align: justify;
+  }
+  ul {
+    border: solid 2px #2BF023;
+    border-radius: 5px;
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+  }
+
+  ul li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+    list-style-type: none!important;
+  }
+
+  ul li:before {
+    font-family: FontAwesome;
+    content: "\f138";/*アイコンの種類*/
+    position: absolute;
+    left : 1em;/*左端からのアイコンまでの距離*/
+    color: #2BF023;/*アイコン色*/
   }
 }
 
@@ -282,7 +323,7 @@ ul{
 
 //LogInページ
 .log_in_form{
-  height: 800px;
+  min-height: 1000px;
   padding: 0 10% 0 10%;
 }
 .option{
@@ -292,7 +333,7 @@ ul{
 
 //パスワードリセットページ
 .password_reset_form{
-  height: 300px;
+  min-height: 800px;
   padding: 0 10% 0 10%;
 }
 .password_reset_description{
@@ -317,7 +358,7 @@ ul{
   height: 1000px;
   padding: 0 10% 0 10%;
 }
-.password_help_text{
+.form_help_text{
   color: #ADA5A5;
 }
 
@@ -343,6 +384,7 @@ ul{
   padding: 12% 20% 20% 50%;
   color: #191313;
   font-size: 3rem;
+  white-space: nowrap;
 }
 .give_and_take_count{
   height: 100px;
@@ -382,6 +424,99 @@ ul{
 }
 .my-page-link{
   display: block;
+  color: black;
+}
+
+//registered（Giveするのに登録済みの本を表示するページ）
+
+.registered {
+  padding: 0 10% 0 10%;
+  min-height: 1200px;
+  .registered-description {
+    border-bottom: #2BF023 solid 1px;
+    span {
+      font-size: 1.5rem;
+      line-height: 2.0;
+      text-align: justify;
+    }
+  }
+  .registered-tile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .registered-item{
+    padding: 50px 0 20px 0;
+    img{
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+//historyページ
+.history{
+  min-height: 1200px;
+  padding: 0 10% 0 10%;
+  .history-select{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+    div{
+      font-size: 2rem;
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+  }
+  .gave_item{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p{
+      font-size: 1.5rem;
+    }
+  }
+  .took_item{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+//offeredページ
+.offered{
+  padding: 0 10% 0 10%;
+  min-height: 1200px;
+}
+.offered-description{
+  border-bottom: #2BF023 solid 1px;
+  margin-bottom: 100px;
+  span{
+    font-size: 1.5rem;
+    line-height: 2.0;
+    text-align: justify;
+  }
+}
+.offered-index{
+  .offered-count{
+    span{
+      color: #ADA5A5;
+      font-size: 1.7rem;
+    }
+  }
+  p{
+    margin: 50px 0;
+    font-size: 1.2rem;
+    border-bottom: black solid 1px;
+  }
+  .fa-hand-point-right{
+    color: #2BF023;
+    font-size: 1.2rem;
+  }
+  .fa-hand-point-left{
+    color: #2BF023;
+    font-size: 1.2rem;
+  }
 }
 
 
@@ -498,17 +633,15 @@ ul{
   align-items: center;
   justify-content: center;
   height: 200px;
-  img{
-    margin: 15px;
-    padding: 15px;
-    width: 4rem;
-    height: 4rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .sns-icon-3{
+    //color: #2BF023;
+    margin: 3rem;
   }
-}
-.have_a_nice_day{
-  p{
+  a{
+    text-decoration: none;
     color: #2BF023;
-    font-size: 5rem;
   }
 }
 .logo-ball{
@@ -539,3 +672,172 @@ ul{
 .book_exhibit_container{
   padding-top: 100px;
 }
+
+//give_confirmationページ（出品するを押したら飛ばされる確認のページ）
+.give-confirmation {
+  min-height: 1200px;
+  padding: 0 10% 0 10%;
+
+  .give-confirmation-description {
+    border-bottom: #2BF023 solid 1px;
+    span {
+      font-size: 1.5rem;
+      line-height: 2.0;
+      text-align: justify;
+    }
+  }
+  .give-confirmation-image{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    width: 500px;
+    height: 500px;
+  }
+  .submit-button-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+}
+
+//messageページ（取引が成立すると作成される）
+.message{
+  padding: 0 10% 0 10%;
+
+}
+.message-description{
+  border-bottom: #2BF023 solid 1px;
+  span{
+    font-size: 1.5rem;
+    line-height: 2.0;
+    text-align: justify;
+  }
+}
+.complete-button-container{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.complete-button{
+  position: absolute;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #2BF023;
+    color: #ffffff;
+    border-bottom: solid 4px #2E2F30;
+    border-radius: 3px;
+  }
+  .complete-button:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+  .message-index{
+    min-height: 1000px;
+
+    /*以下、①背景色など*/
+    .line-bc {
+      padding: 20px 10px;
+      max-width: 600px;
+      margin: 15px auto;
+      text-align: right;
+      font-size: 14px;
+      //background: #7da4cd;
+
+    }
+
+    /*以下、②左側のコメント*/
+    .balloon6 {
+      width: 100%;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+
+    .balloon6 .faceicon {
+      float: left;
+      margin-right: -50px;
+      width: 40px;
+    }
+
+    .balloon6 .faceicon img{
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+    .balloon6 .chatting {
+      width: 100%;
+      text-align: left;
+    }
+    .says {
+      display: inline-block;
+      position: relative;
+      margin: 0 0 0 50px;
+      padding: 10px;
+      max-width: 250px;
+      border-radius: 12px;
+      background: #edf1ee;
+    }
+
+    .says:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 3px;
+      left: -19px;
+      border: 8px solid transparent;
+      border-right: 18px solid #edf1ee;
+      -webkit-transform: rotate(35deg);
+      transform: rotate(35deg);
+    }
+    .says p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*以下、③右側の緑コメント*/
+    .mycomment {
+      margin: 10px 0;
+    }
+    .mycomment p {
+      display: inline-block;
+      position: relative;
+      margin: 0 10px 0 0;
+      padding: 8px;
+      max-width: 250px;
+      border-radius: 12px;
+      background: #30e852;
+      font-size: 15px;
+    }
+
+    .mycomment p:after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: -19px;
+      border: 8px solid transparent;
+      border-left: 18px solid #30e852;
+      -webkit-transform: rotate(-35deg);
+      transform: rotate(-35deg);
+    }
+  }
+  .message-remarks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      font-size: 1.5rem;
+    }
+  }
+  .message-text-box{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+

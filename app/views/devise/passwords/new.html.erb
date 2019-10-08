@@ -5,8 +5,8 @@
 <div class="password_reset_description">
   <span>パスワードを変更するにはご登録済みのメールアドレスを入力してください。</span>
   <p>パスワード再発行の案内を添付したメールを送信します。</p>
-
 </div>
+
 <div class="password_reset_form">
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -14,7 +14,7 @@
 
     <div class="form-group">
       <%= f.email_field :email, autofocus: true, autocomplete: "email",
-                        :placeholder => "email", class: "form-control"%>
+                        :placeholder => "email",id: "email", class: "form-control"%>
     </div>
 
     <div class="text-right">
@@ -22,11 +22,11 @@
     </div>
   <% end %>
 
-  <div class="password_reset_description">
-    <span>メールが届かない場合は迷惑メールフォルダをご確認ください。
-    それでも解決しない場合は<%= link_to "お問い合わせ", contact_path, style: "color: #2BF023;" %>よりご連絡ください。</span>
-  </div>
+</div>
 
+<div class="password_reset_description">
+    <span>メールが届かない場合は迷惑メールフォルダをご確認ください。
+    それでも解決しない場合は<%= link_to "お問い合わせ", contact_path %>よりご連絡ください。</span>
 </div>
 
 

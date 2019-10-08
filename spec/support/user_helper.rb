@@ -25,7 +25,7 @@ module UserHelper
   # ログイン済みでマイページになっているところから
   def user_edit
     click_on "アカウント情報の編集"
-    fill_in "name", with: "変更後の名前です"
+    fill_in "name", with: "変更後の名前"
     fill_in "email", with: "different_email@gmail.com"
     fill_in "password", with: "new-password"
     fill_in "password_confirmation", with: "new-password"

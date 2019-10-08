@@ -1,0 +1,43 @@
+<div class="heading text-center">
+  <span>Offered</span>
+</div>
+
+<div class="offered">
+
+  <div class="offered-description text-center">
+    <span><%= @user.name %>さんに届いたGiveオファーです。<br>
+確認後、「この人にGiveする」ボタンを押してください。<br>
+決定すると相手とメッセージのやり取りができるようになります。<br>
+不安なことは確認して、発送してください。</span>
+  </div>
+
+  <div class="offered-index">
+<!--    繰り返し処理で書いていって、１件ごとに下線を引いていく感じになります。-->
+<!--    それぞれのオファーの枠内に「この人にGiveする」ボタン的なのを入れて、押したら確認のメッセージが出てキャンセルしなければ確定って感じにするかな-->
+<!--    完了したらその人とのmessageページにrenderして、決定した旨をflashで表示させる感じにするかな-->
+<!--    オファーが承認された側はその旨が通知されたりだとか、メッセージがきたらバッジ表示になるとか実装したいけれどもそれはまた今度でいいと思う。-->
+<!--    下の繰り返し処理に関しての記述は全くの仮であり、リレーションの問題が解決した時にしっかり書く必要がある-->
+    <%# @user.offered_book.each do |b| %>
+<!--    <p><%#= b.offer_user %></p>-->
+    <%# end %>
+
+<!--    viewだけということで、仮に書いておくが、本番のときには削除して、上の繰り返し処理で書けるようにしておく必要がある-->
+    <div class="offered-count text-center"><span>5件のオファーがあります。</span></div>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+    <p class="text-center">たつぽんさんが「独ソ戦」にオファーをしています <i class="fas fa-hand-point-right"></i> この人にGiveする <i class="fas fa-hand-point-left"></i></p>
+  </div>
+
+  <%= render "layouts/how_guide" %>
+</div>
