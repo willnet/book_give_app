@@ -61,26 +61,23 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 #devise導入時に追加
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.delivery_method = :letter_opener_web
 
 
 
-  #sendridを使うためのSMTPサーバーの設定です。パスワードとかは定数になっているのでしっかり値を入れること
-  # 参考 https://qiita.com/jung_issei/items/a3bb837cfdedda7b5d85
-  # 開発環境のやつだし、Railsチュートリアルにあったパターンでやる可能性が高いので一旦コメントアウトしておきます
-  # config.action_mailer.default_url_options = { host: Settings.web[:host], protocol:  Settings.web[:protocol]}
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :enable_starttls_auto => true,
-  #   :address => Settings.smtp[:address],
-  #   :port => Settings.smtp[:port],
-  #   :domain => Settings.smtp[:domain],
-  #   :user_name => Settings.smtp[:user_name],
-  #   :password => Settings.smtp[:password],
-  #   :authentication => 'login'
-  # }
+  config.action_mailer.raise_delivery_errors = true
+  host = 'localhost:3000'
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
 
 
 

@@ -9,7 +9,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
 gem 'webpacker', '~> 4.0'
-
+gem 'ruby-debug-ide'
+gem 'debase'
 gem 'jbuilder', '~> 2.7'
 gem 'fog-aws'
 gem 'devise'
@@ -55,6 +56,7 @@ group :production do
 end
 
 group :test do
+  gem 'database_rewinder'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
