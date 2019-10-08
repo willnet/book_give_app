@@ -5,10 +5,12 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/layouts/_exhibit_fix_button.html.erb" line="1" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="c65befe9-6247-4176-8bfc-81c9649832c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/features/users_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/users_spec.rb" afterDir="false" />
     </list>
+
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -44,8 +46,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/features/users_spec.rb">
+
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="508">
                   <caret line="108" selection-start-line="108" selection-end-line="108" />
@@ -57,6 +61,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
               <provider selected="true" editor-type-id="text-editor">
@@ -66,6 +71,7 @@
               </provider>
             </entry>
           </file>
+
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
               <provider selected="true" editor-type-id="text-editor">
@@ -216,28 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="book_give_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book_give_app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="book_give_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book_give_app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="book_give_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="book_give_app" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -249,7 +234,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="book_give_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="book_give_app" type="462c0819:PsiDirectoryNode" />
+
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,10 +449,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+
     <option name="totallyTimeSpent" value="274409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="801" extended-state="6" />
+
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.3297568" />
@@ -513,8 +514,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="480">
           <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+
         </state>
       </provider>
     </entry>
@@ -797,8 +800,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/features/users_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="508">
           <caret line="108" selection-start-line="108" selection-end-line="108" />
+
         </state>
       </provider>
     </entry>
@@ -821,8 +826,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/offered.html.erb">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="478">
           <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+
         </state>
       </provider>
     </entry>
@@ -835,8 +842,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="14">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+
         </state>
       </provider>
     </entry>
