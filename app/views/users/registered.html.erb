@@ -1,0 +1,32 @@
+<div class="heading text-center">
+  <span>Registered</span>
+</div>
+
+<div class="registered">
+
+  <div class="registered-description text-center">
+    <span><%= @user.name %>さんは以下の本を登録済みです。
+      <br>
+オファーが届き、その人にGiveしても良いと思ったら、<br>発送してください。<br>
+      <br>
+    Giveする相手を決めるとその相手とメッセージのやり取りが<br>可能になります。</span>
+  </div>
+
+  <div class="registered-tile text-center">
+<!--    実際には繰り返し処理で書くことになると思うけどひとまずviewだけ-->
+    <div class="registered-item"><%= image_tag "zikken.png" %></div>
+    <div class="registered-item"><%= image_tag "zikken.png" %></div>
+    <div class="registered-item"><%= image_tag "zikken.png" %></div>
+  </div>
+
+  <!--  これは仮、本当はBootstrapで書く-->
+  <div class="text-center pt-5">
+    <%= image_tag "pagination.png" %>
+  </div>
+
+  <%= render "layouts/how_guide" %>
+
+</div>
+
+
+<%= render "layouts/exhibit_fix_button" %>

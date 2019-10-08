@@ -13,10 +13,12 @@ RSpec.describe User, type: :model do
       expect(user).to_not be_valid
     end
 
-    it "nameは５０文字以上だと保存に失敗すること" do
+    it "nameは７文字以上だと保存に失敗すること" do
       user = create(:user)
-      user.update(name: "a"*51)
+      user.update(name: "a"*7)
       expect(user).to_not be_valid
+      user.update(name: "a"*6)
+      expect(user).to be_valid
     end
 
     it "emailが無効な値であれば失敗すること" do

@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   end
 
   resources :users
+  get '/users/:id/registered',to: 'users#registered', as: 'user_registered'
+  get '/users/:id/history', to: "users#history", as: 'user_history'
+  get '/users/:id/offered', to: "users#offered", as: 'user_offered'
 
   #static_pagesコントローラの部分
   root "static_pages#top"
@@ -26,6 +29,12 @@ Rails.application.routes.draw do
   get 'book/offer_success'
   get 'book/new_give'
   get 'book/give_confirmation'
+  get '/book/:id/message' => "book#message"
   resources :book
+
+  #開発環境でletter_opener_webを使うための記述
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/letter_opener'
+  end
 
 end

@@ -2,9 +2,78 @@
     <span>How to use</span>
 </div>
 
-<div class="how_to_use_sentence">
-<!--  pタグで書くとスタイルが適用されるからね、本文書くときに変えても良いけど！！-->
-  <p></p>
+<div class="give_or_take">
+  <div><a href="#do_give">Giveするなら</a></div>
+  <div><a href="#do_take">Giveされるなら</a></div>
 </div>
+
+<div class="how_to_use_heading"><p id="do_give">Giveするなら</p></div>
+
+<div class="how_to_use_sentence">
+
+  <ul>
+    <li>まずは<%= link_to "Sign up", new_user_registration_path %>または
+      <%= link_to "Log in", new_user_session_path %></li>
+    <li><%= link_to "「出品する」", book_new_give_path %>をクリック</li>
+    <li>ISBNを入力して本を検索、「Giveする」を押す</li>
+    <li>確認画面が表示されるので、確定する</li>
+  </ul>
+
+  <span>Giveして欲しい人が現れたらオファーが送られてきます。<br>
+オファーは<%= link_to "マイページ", current_user %>の<%= link_to "「届いているGiveオファー」", "#" %>から確認できます。<br>
+届いたオファーの中から、「この人にGiveしても良い」
+と思ったら「この人にGiveする」を選択してください。<br>
+<br>
+決定次第、２者間でのメッセージスペースが作成されます。<br>
+不安なことは確認して、本を発送しましょう。
+なお、原則送料はGiveされる方の負担とします。
+<br><br>
+送付先についてはご相手とのメッセージで確認して
+ください。
+    <br><a href="https://www.post.japanpost.jp/service/sisho/" target="_blank">郵便局留</a>もオススメです。
+  <br>
+  ご不明な点がございましたら、<%= link_to "お問合せ", contact_path %>からご連絡ください。
+    </span>
+
+</div>
+
+<div class="how_to_use_heading"><p id="do_take">Giveされるなら</p></div>
+
+<div class="how_to_use_sentence">
+
+  <ul>
+    <li>まずは<%= link_to "Sign up", new_user_registration_path %>または
+      <%= link_to "Log in", new_user_session_path %></li>
+    <li>画面上部のメニューから<%= link_to "「本を探す」", "#" %>をクリック</li>
+    <li>ISBNまたは書籍名から本を検索！！</li>
+    <li>該当する書籍をクリックしてオファーを送信</li>
+  </ul>
+
+  <span>
+    オファーを送信したらGIveする方の承認を待ってください。<br>
+    <br>
+送信したオファーはマイページの「オファー済み」から
+確認できます。<br>
+    オファーがGiveしてくれる方に承認されずにその取引が
+完了する（他の方との取引によってなど）と、このリスト
+からも自動で削除されます。<br>
+    <br>
+
+Giveすることが決定されると、自動でメッセージルーム
+が開設されます。そこで不安なことを確認したり、送付先
+を確認したりしてください。
+
+本が到着しましたら、メッセージルームにある
+「本が届いた」ボタンをクリックしてください。
+
+お疲れ様でした、Giveしてくれた方にお礼のメッセージ
+を送信して終わりにしましょう。
+
+なお、メッセージルームは取引完了後１０日で自動的に削除されます。<br>
+    ご不明な点がございましたら、<%= link_to "お問合せ", contact_path %>からご連絡ください。
+  </span>
+</div>
+
+<%= render 'layouts/sns_icon' %>
 
 <%= render "layouts/exhibit_fix_button" %>

@@ -1,0 +1,69 @@
+<div class="heading text-center">
+  <span>Message</span>
+</div>
+
+<div class="message">
+<!--  この画面を見ている（現在ログインしている）ユーザーがこの本の取引においてtakerならこれ、giverならこれ、と表示を変えることになります-->
+  <%# if current_user.id == @book.taker_id %>
+
+  <div class="message-description text-center">
+    <span>相手とメッセージを送受信できます。<br>
+配送先の確認など、必要に応じてご利用ください。<br>
+お手元に本が届きましたら「本が届いた！！」ボタンを押して、取引を完了してください。</span>
+  </div>
+
+  <div class="complete-button-container">
+    <div class="complete-button">
+      <p>本が届いた！！</p>
+    </div>
+  </div>
+
+<!--  このページを見ているのがgiverならボタンが無いパターンを表示させる-->
+  <%# elsif current_user.id == @book.giver_id %>
+<!--  <div class="message-description text-center">-->
+<!--    <span>相手とメッセージを送受信できます。<br>-->
+<!--配送先の確認など、必要に応じてご利用ください。</span>-->
+  <%# end %>
+
+  <div class="message-index">
+<!--    繰り返し処理で、current_userのを右側、違ったら左側って感じにすればいけるんじゃないかな。-->
+    <div class="line-bc"><!--①LINE会話全体を囲う-->
+
+      <!--②左コメント始-->
+      <div class="balloon6">
+        <div class="faceicon">
+<!--          下の相手の画像のところは相手のプロフに飛べるようにしてやると良いよね、ただしアクセス制限をかけないのだから、表示される項目は制限されないといけないけど。-->
+          <%= image_tag "zikken.png" %>
+        </div>
+        <div class="chatting">
+          <div class="says">
+            <p>こんにちは</p>
+          </div>
+        </div>
+      </div>
+      <!--②/左コメント終-->
+
+      <!--③右コメント始-->
+      <div class="mycomment">
+        <p>
+          私はログインしている側です。
+        </p>
+      </div>
+      <!--/③右コメント終-->
+    </div>
+  </div>
+
+  <div class="message-text-box">
+<!--    messageを入力してもらってそれをDBに保存するようにしたい-->
+    <%#= form_for(@message, url: "どこに飛ばすのか", method: :post) do |f| %>
+    <%#= f.text_field_tag class: "" ,placeholder: "相手へのメッセージを入力してください"%>
+    <%#= f.submit "送信ボタンを作成して横につける必要があるよね" %>
+    <%# end %>
+  </div>
+
+  <div class="message-remarks">
+    <p>詳しい流れや方法は<%= link_to "使い方", how_to_use_path %>をご確認ください。</p>
+  </div>
+
+  <%= render 'layouts/sns_icon' %>
+</div>

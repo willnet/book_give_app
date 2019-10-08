@@ -4,6 +4,14 @@ FactoryBot.define do
     name{"マイケル"}
     email{"example1@gmail.com"}
     password{"foobar"}
+
     # image{ Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec/fixtures/test.jpg'))}
+
+
+    before(:create){ |user|
+      user.skip_confirmation_notification!
+      user.skip_confirmation!
+    }
+
   end
 end

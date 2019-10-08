@@ -1,5 +1,5 @@
 class BookController < ApplicationController
-  before_action :authenticate_user!, only:[:new_give,:give_confirmation,:send_offer,:create]
+  before_action :authenticate_user!, only:[:new_give,:give_confirmation,:send_offer,:create,:message]
 
   def search_results
   end
@@ -11,6 +11,9 @@ class BookController < ApplicationController
   end
 
   def give_confirmation
+  end
+
+  def message
   end
 
   def new_give

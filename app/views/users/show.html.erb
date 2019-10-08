@@ -29,15 +29,18 @@
 </div>
 
 <div class="my-page-menu">
-  <div class="box"><span class="align-middle"><%= "オファー受付中のあなたの本" %></span></div>
+  <div class="box"><span class="align-middle"><%= link_to "オファー受付中のあなたの本", user_registered_path,
+  class: "my-page-link"%></span></div>
   <div class="box"><span class="align-middle"><%= link_to "アカウント情報の編集",  edit_user_registration_path,
-                                                          style: "color: black;", class: "my-page-link" %></div></span>
-  <div class="box"><span class="align-middle"><%= "Giveした履歴・Giveされた履歴" %></span></div>
-  <div class="box"><span class="align-middle"><%= "届いているGiveオファー" %></span></div>
-  <div class="box"><span class="align-middle"><%= "欲しい本をオファーする" %></span></div>
-  <div class="box"><span class="align-middle"><%= "Giveする" %></span></div>
+                                                           class: "my-page-link" %></span></div>
+  <div class="box"><span class="align-middle"><%= link_to "Giveした履歴・Giveされた履歴", user_history_path,
+  class: "my-page-link"%></span></div>
+  <div class="box"><span class="align-middle"><%= link_to "届いているGiveオファー", user_offered_path,
+  class: "my-page-link"%></span></div>
+  <div class="box"><span class="align-middle"><%= link_to "Giveする", book_new_give_path,
+                                                          class: "my-page-link" %></span></div>
 
-  <p class="text-center pt-5">詳しい流れや使い方は<%= link_to "使い方", how_to_use_path, style: "color: #2BF023;" %>をご覧ください。</p>
+  <%= render "layouts/how_guide" %>
 </div>
 
 
