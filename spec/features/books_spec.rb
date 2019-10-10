@@ -18,17 +18,16 @@ RSpec.feature "Books", type: :feature do
 
   feature "searchページ周り" do
     before(:each) do
+      @user = create(:user)
       @book = create(:book)
     end
 
     scenario "Searchページのviewが正常に表示されていること" do
-      user = User.create(name: "ジョンソン")
       visit root_path
       click_link "こちらのページ"
-      save_and_open_page
       expect(page).to have_content "Search"
       expect(current_path).to eq book_search_results_path
-      expect(page).to have_content "残酷な"
+      expect(page).to have_content "マインドセット"
     end
 
   end

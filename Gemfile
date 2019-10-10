@@ -15,6 +15,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'fog-aws'
 gem 'devise'
 gem 'jquery-rails'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 #必要なgemを最初に入れておきます。
 gem 'jquery-rails'

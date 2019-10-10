@@ -3,7 +3,7 @@ class BookController < ApplicationController
 
   def search_results
     # 検索したものを表示させる
-    @books = Book.where(taker_id: nil).search(params[:search])
+    @books = Book.where(taker_id: nil).page(params[:page]).per(6).search(params[:search])
   end
 
   def send_offer

@@ -543,12 +543,12 @@ ul{
 
 //searchページ
 .search{
-  min-height: 800px;
+  min-height: 1000px;
   padding: 0 10% 0 10%;
 }
 .search-box{
   padding-bottom: 50px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-bottom: #2BF023 1px solid;
 }
 .grid{
@@ -568,6 +568,24 @@ ul{
   .search-book-title{
     padding-top: 20px;
     font-size: 1.2rem;
+  }
+}
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  /*ページネーション自体のデザイン*/
+  .pagination>li>a {
+    border: none;
+    color: #696969;
+  }
+  .pagination>.active>a {
+    background: #93c9ff;
+    border-radius: 15px;
+  }
+  .pagination>li>a:hover {
+    border-radius: 15px;
   }
 }
 
