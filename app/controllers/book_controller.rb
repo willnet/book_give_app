@@ -2,6 +2,8 @@ class BookController < ApplicationController
   before_action :authenticate_user!, only:[:new_give,:give_confirmation,:send_offer,:create,:message]
 
   def search_results
+    # 検索したものを表示させる
+    @books = Book.where(taker_id: nil).search(params[:search])
   end
 
   def send_offer
