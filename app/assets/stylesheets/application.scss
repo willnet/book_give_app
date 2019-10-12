@@ -148,21 +148,18 @@ ul{
 
 //Topページ
 .top-background-color{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 600px;
   background: #1CD8D2;
   background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
   background: linear-gradient(to right, #93EDC7, #1CD8D2);
-  position: relative;
 }
 .top-background-color span{
   font-weight: normal;
-  font-size: 2.5rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 4rem;
   margin:0;
   padding:0;
 }
@@ -170,11 +167,33 @@ ul{
 .top-description{
   color: #16360E;
   font-size: 1.5rem;
-  padding-top: 10%;
-  height: 400px;
-}
-.give_example{
+  padding: 10% 10% 0 10%;
   height: 600px;
+  .top-description-line{
+    border-bottom: #2BF023 1px solid;
+    margin-bottom: 50px;
+  }
+}
+.top-give-example{
+  padding: 0 10% 0 10%;
+  min-height: 800px;
+  .top-give-example-heading{
+    p{
+      font-size: 2rem;
+      border-bottom: #2BF023 solid 1px;
+    }
+  }
+}
+.top-give-example-tile{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .top-give-example-tile-item{
+    padding: 50px 0 20px 0;
+    img{
+      width: 200px;
+      height: 250px;
+    }
+  }
 }
 .sign_up-recommend{
   padding: 0 10% 0 10%;
@@ -522,16 +541,16 @@ ul{
 
 //booksコントローラの部分
 
-//search_resultsページ
-.search-title{
-  height: auto;
-  font-size: 2rem;
-  padding: 20px 10% 0 10%;
-  span{
-    border-bottom: solid #2BF023 1px;
-  }
+//searchページ
+.search{
+  min-height: 1000px;
+  padding: 0 10% 0 10%;
 }
-
+.search-box{
+  padding-bottom: 50px;
+  font-size: 1.2rem;
+  border-bottom: #2BF023 1px solid;
+}
 .grid{
   display: grid;
   gap: 10px;
@@ -546,10 +565,27 @@ ul{
     display: inline-block; /* 複数の画像を横に並べたい場合 */
     border: 2px solid #2BF023; /* 枠線を付加 */
   }
-  p{
-    font-size: 1.5rem;
-    line-height: 1.7;
-    text-align: justify;
+  .search-book-title{
+    padding-top: 20px;
+    font-size: 1.2rem;
+  }
+}
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  /*ページネーション自体のデザイン*/
+  .pagination>li>a {
+    border: none;
+    color: #696969;
+  }
+  .pagination>.active>a {
+    background: #93c9ff;
+    border-radius: 15px;
+  }
+  .pagination>li>a:hover {
+    border-radius: 15px;
   }
 }
 

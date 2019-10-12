@@ -147,6 +147,7 @@ RSpec.feature "Users", :devise do
   feature "マイページ周り" do
     scenario "マイページのviewが正常に表示されていること" do
       log_in @user
+      expect(page).to have_content "0"
       expect(page).to have_content "オファー受付中のあなたの本"
       expect(page).to have_content "アカウント情報の編集"
       expect(page).to have_content "Giveした履歴・Giveされた履歴"

@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # 登録済みの本を照会する
   def registered
     @user = User.find_by(id: params[:id])
+    @now_give_books = @user.now_give_books.page(params[:page]).per(6)
   end
 
   #Giveした履歴とGIveされた履歴を表示するページ

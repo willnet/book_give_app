@@ -3,14 +3,33 @@
 </div>
 
 <div class="top-description text-center">
-  <p>本をシェアするサービスです。</p>
-  <p>あなたの家に眠っている本を誰かにgiveしてみませんか?</p>
+  <p class="top-description-line">本が欲しい人とGiveしたい人を繋げたい。</p>
+
+  <p>自分がGiveできる本を簡単に登録、欲しい人からオファーが届きます。</p>
+  <p>届いたオファーの中からGiveしたい人を選んでその人とメッセージを。気になるところは相談して発送しましょう。</p>
+  <p>本を無料で貰いたい人も是非ご利用ください。</p>
+  <p>気になる本を見つけたらオファーを送ってみましょう。</p>
+  <p>あなたの家に眠っている本を誰かにGiveしてみませんか?</p>
 </div>
 
 
 
-<div class="give_example">
-  <h2 class="text-danger">実際にgiveされている本をタイル表示して検索窓を置く部分が入ります（仮で600px取ってある）</h2>
+<div class="top-give-example">
+
+  <div class="top-give-example-heading">
+    <p class="text-center ">今、こんな本がGiveされています</p>
+  </div>
+
+  <div class="top-give-example-tile text-center">
+    <!--    実際には繰り返し処理で書くことになると思うけどひとまずviewだけ-->
+    <div class="top-give-example-tile-item"><%= image_tag "gold_feather" %></div>
+    <div class="top-give-example-tile-item"><%= image_tag "gold_feather" %></div>
+    <div class="top-give-example-tile-item"><%= image_tag "gold_feather" %></div>
+    <div class="top-give-example-tile-item"><%= image_tag "gold_feather" %></div>
+  </div>
+
+  <p class="text-center">気になる本がありましたら<%= link_to "こちらのページ", book_search_results_path %>から検索してください。</p>
+
 </div>
 
 
