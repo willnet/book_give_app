@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_27_084028) do
+ActiveRecord::Schema.define(version: 2019_10_12_004123) do
 
   create_table "books", force: :cascade do |t|
     t.string "name"
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2019_09_27_084028) do
     t.string "image"
     t.string "address"
     t.boolean "admin"
-    t.integer "give_count"
-    t.integer "take_count"
+    t.integer "give_count", default: 0
+    t.integer "take_count", default: 0
     t.string "took_books"
     t.string "now_give_books"
     t.string "already_give_books"

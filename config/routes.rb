@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/privacy', to: "static_pages#privacy"
 
   #bookコントローラの部分
+  post 'book/:id/destroy', to: 'book#destroy'
   get 'book/search_results'
   get 'book/send_offer'
   get 'book/offer_success'

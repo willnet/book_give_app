@@ -12,16 +12,20 @@
     Giveする相手を決めるとその相手とメッセージのやり取りが<br>可能になります。</span>
   </div>
 
-  <div class="registered-tile text-center">
-<!--    実際には繰り返し処理で書くことになると思うけどひとまずviewだけ-->
-    <div class="registered-item"><%= image_tag "zikken.png" %></div>
-    <div class="registered-item"><%= image_tag "zikken.png" %></div>
-    <div class="registered-item"><%= image_tag "zikken.png" %></div>
-  </div>
+    <div class="grid">
+      <% @now_give_books.each do |book| %>
+        <div class="book-cover text-center">
+          <!--      画像のところはそのまま本の書影がくる-->
+          <%= image_tag "zikken.png" %>
+          <p class="search-book-title"><%= book.name %></p>
+          <p><%= link_to "削除する",book_path(book.id),
+                         method: :delete,data: { confirm: '本当に削除しますか？'}%></p>
+        </div>
+      <% end %>
+    </div>
 
-  <!--  これは仮、本当はBootstrapで書く-->
-  <div class="text-center pt-5">
-    <%= image_tag "pagination.png" %>
+  <div class="text-center pagination">
+    <%= paginate @now_give_books %>
   </div>
 
   <%= render "layouts/how_guide" %>
