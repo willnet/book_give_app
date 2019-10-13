@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(function() {
     //画像のHTMLを生成する。
     function buildImage(book) {
         // var no_image = '<div class="book_image"><img "width="200" height="200" src="<%= image_path('no_image.jpg')%>"></div>';
